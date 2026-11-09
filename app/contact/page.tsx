@@ -52,9 +52,6 @@ export default function ContactPage() {
                     <span>
                       <span className="block text-xs tracking-[0.16em] text-muted uppercase">Service area</span>
                       <span className="text-[1.1rem]">Southern Maryland and virtual</span>
-                      <span className="mt-1 block text-sm text-muted">
-                        Exact office town <span className="placeholder">[Confirm town]</span>
-                      </span>
                     </span>
                   </div>
                 </li>

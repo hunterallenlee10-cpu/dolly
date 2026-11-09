@@ -42,7 +42,8 @@ const planningItems = [
 function Price() {
   return (
     <p className="mt-auto flex flex-wrap items-center gap-2 border-t border-ink/10 pt-5 text-[0.85rem] text-muted">
-      Pricing shared on your intro call <span className="placeholder">[Confirm pricing]</span>
+      <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-brass" />
+      Transparent pricing, shared on your intro call
     </p>
   );
 }

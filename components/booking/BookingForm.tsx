@@ -185,7 +185,7 @@ export default function BookingForm({ preset = {}, variant = "modal", titleId, o
                   <Mail aria-hidden size={18} strokeWidth={1.5} className="text-brass-deep" /> {site.email}
                 </a>
               </div>
-              <p className="mt-6 text-xs text-muted">Concept demo: nothing was sent. Your details were only logged in this browser.</p>
+              <p className="mt-6 text-xs text-muted">Demo preview: this form isn&rsquo;t connected yet, so nothing was sent. Call or email to reach Dolly directly.</p>
             </motion.div>
           )}
         </AnimatePresence>

@@ -29,8 +29,7 @@ const faqs: { q: string; a: ReactNode }[] = [
     q: "What should I bring to my first meeting?",
     a: (
       <>
-        For the intro call, just your questions. If we work together, I&rsquo;ll send a checklist, which typically includes last year&rsquo;s return and this year&rsquo;s tax forms.{" "}
-        <span className="placeholder">[Confirm her checklist]</span>
+        For the intro call, just your questions. If we work together, I&rsquo;ll send a checklist, which typically includes last year&rsquo;s return and this year&rsquo;s tax forms.
       </>
     ),
   },
@@ -42,7 +41,7 @@ const faqs: { q: string; a: ReactNode }[] = [
     q: "How much does it cost?",
     a: (
       <>
-        Pricing is transparent and shared on your intro call, based on what you need. <span className="placeholder">[Confirm pricing]</span>
+        Pricing is transparent and depends on what you need. You&rsquo;ll know exactly what to expect after your intro call.
       </>
     ),
   },

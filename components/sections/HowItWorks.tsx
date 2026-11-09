@@ -12,8 +12,6 @@ const steps = [
   {
     title: "Organize & file",
     body: "Document gathering made simple, and clear explanations of everything on your return.",
-    placeholder: "[Confirm her portal]",
-    placeholderNote: "Secure document upload",
   },
   {
     title: "Plan ahead",
@@ -63,11 +61,6 @@ export default function HowItWorks() {
               <Reveal delay={i * 0.1}>
                 <h3 className="display text-[1.9rem] leading-tight">{s.title}</h3>
                 <p className="mt-3 max-w-[34ch] text-ink-soft">{s.body}</p>
-                {s.placeholder && (
-                  <p className="mt-4 flex flex-wrap items-center gap-2 text-[0.88rem] text-muted">
-                    {s.placeholderNote} <span className="placeholder">{s.placeholder}</span>
-                  </p>
-                )}
               </Reveal>
             </li>
           ))}

@@ -12,7 +12,6 @@ export default function Footer({ onHome = true }: { onHome?: boolean }) {
         <div className="max-w-[340px]">
           <ConceptMark tone="ivory" />
           <p className="mt-6 text-[0.95rem] leading-relaxed text-ivory/70">{site.bio}</p>
-          <p className="mt-4 text-[0.75rem] tracking-wide text-ivory/60">Logo shown is a concept mark for this preview.</p>
         </div>
 
         <div>
