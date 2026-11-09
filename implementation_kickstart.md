@@ -47,11 +47,11 @@ Type: Fraunces (display, soft italic for one word) + Inter (body/UI), via `next/
 
 ## Phase 2: story + services
 
-- [ ] Credential strip (4 verified facts)
-- [ ] "Two disciplines. One clear picture." scroll-linked circle merge (reduced motion: merged)
-- [ ] Services bento (4 cards, planning card large, `[Confirm pricing]`)
-- [ ] "Flat fee. Your investments stay put." dark ink section + CTA
-- [ ] Who I help (4 cards incl. federal employees & military families)
+- [x] Credential strip (4 verified facts)
+- [x] "Two disciplines. One clear picture." scroll-linked circle merge (reduced motion: merged)
+- [x] Services bento (4 cards, planning card large, `[Confirm pricing]`)
+- [x] "Flat fee. Your investments stay put." dark ink section + CTA
+- [x] Who I help (4 cards incl. federal employees & military families)
 
 ## Phase 3: timeline + fit check
 
