@@ -76,7 +76,13 @@ Type: Fraunces (display, soft italic for one word) + Inter (body/UI), via `next/
 - [x] QA: em dash grep, CFP® grep, anchors, reduced motion, 375/768/1280/1600 widths, no horizontal scroll
 - [x] Lighthouse mobile (target 95+ all four)
 - [x] Screenshots at 375 and 1440
-- [ ] Push + deploy
+- [x] Push + deploy
+
+## Live deployment
+
+- URL: https://dolly-cpa-concept.vercel.app (Vercel project `dolly-cpa-concept`, team leu, Git import from `hunterallenlee10-cpu/dolly`)
+- Latest production deployment READY; Vercel Web Analytics installed (`@vercel/analytics`) and responding
+- Live Lighthouse mobile: home 90 to 97 across three runs (median 94), contact 98; Accessibility and Best Practices 100 on both
 
 ## QA results (local production build, Lighthouse 12 mobile)
 
