@@ -60,13 +60,13 @@ Type: Fraunces (display, soft italic for one word) + Inter (body/UI), via `next/
 
 ## Phase 4: About / FAQ / CTA / footer / contact
 
-- [ ] How it works: 3 steps, brass line drawn on scroll, `[Confirm her portal]`
-- [ ] Meet Dolly: arch portrait, framed certificate, draft first-person note, SVG signature
-- [ ] Kind words: 3 labelled sample reviews + "Leave a Google review" placeholder
-- [ ] FAQ accordion (8 questions, aria-expanded, keyboard accessible)
-- [ ] Final CTA band
-- [ ] Footer (both pages) with disclaimer + "Concept preview by Lee Enterprises Unlimited."
-- [ ] `/contact` page with inline booking form
+- [x] How it works: 3 steps, brass line drawn on scroll, `[Confirm her portal]`
+- [x] Meet Dolly: arch portrait, framed certificate, draft first-person note, SVG signature
+- [x] Kind words: 3 labelled sample reviews + "Leave a Google review" placeholder
+- [x] FAQ accordion (8 questions, aria-expanded, keyboard accessible)
+- [x] Final CTA band
+- [x] Footer (both pages) with disclaimer + "Concept preview by Lee Enterprises Unlimited."
+- [x] `/contact` page with inline booking form
 
 ## Phase 5: polish + SEO
 
