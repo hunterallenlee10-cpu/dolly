@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { BookingProvider } from "@/components/booking/BookingContext";
 import SmoothScroll from "@/components/motion/SmoothScroll";
@@ -105,6 +106,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {children}
           </BookingProvider>
         </MotionProvider>
+        <Analytics />
       </body>
     </html>
   );
