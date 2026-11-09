@@ -31,19 +31,19 @@ Type: Fraunces (display, soft italic for one word) + Inter (body/UI), via `next/
 
 ## Phase 0: assets
 
-- [ ] Download the three Drive photos into `public/images/raw/`
-- [ ] Background-removed headshot cutout (rembg), original kept as fallback
-- [ ] Certificate: crop off Facebook UI, blur license number, cap at 360px display
-- [ ] Desk cover: blurred texture crop for backgrounds, palette reference only
+- [x] Download the three Drive photos into `public/images/raw/`
+- [x] Background-removed headshot cutout (rembg), original kept as fallback
+- [x] Certificate: crop off Facebook UI, blur license number, cap at 360px display
+- [x] Desk cover: blurred texture crop for backgrounds, palette reference only
 - [ ] Optimized AVIF/WebP via `next/image`
 
 ## Phase 1: hero + nav
 
-- [ ] Project scaffold, tokens, fonts, paper grain, focus rings
-- [ ] Concept mark (SVG monogram "D" in brass arch + wordmark), labelled as concept
-- [ ] Nav: transparent over hero, ivory blur + hairline on scroll, full-screen mobile menu
-- [ ] Hero: eyebrow, headline "Taxes, finally *clear*.", subhead, CTA, call link, arch cutout, eucalyptus line art, credential chip, arch mask reveal + staggered fade-up
-- [ ] Booking modal (4 steps, progress bar, focus trap, Esc, console payload + TODO)
+- [x] Project scaffold, tokens, fonts, paper grain, focus rings
+- [x] Concept mark (SVG monogram "D" in brass arch + wordmark), labelled as concept
+- [x] Nav: transparent over hero, ivory blur + hairline on scroll, full-screen mobile menu
+- [x] Hero: eyebrow, headline "Taxes, finally *clear*.", subhead, CTA, call link, arch cutout, eucalyptus line art, credential chip, arch mask reveal + staggered fade-up
+- [x] Booking modal (4 steps, progress bar, focus trap, Esc, console payload + TODO)
 
 ## Phase 2: story + services
 
