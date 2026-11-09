@@ -55,8 +55,8 @@ Type: Fraunces (display, soft italic for one word) + Inter (body/UI), via `next/
 
 ## Phase 3: timeline + fit check
 
-- [ ] "The tax year, mapped." pinned horizontal scroll on desktop, vertical stack on mobile, weekend/holiday footnote
-- [ ] "Which service fits you?" 3-question fit check, recommendation card, CTA pre-selects modal answer
+- [x] "The tax year, mapped." pinned horizontal scroll on desktop, vertical stack on mobile, weekend/holiday footnote
+- [x] "Which service fits you?" 3-question fit check, recommendation card, CTA pre-selects modal answer
 
 ## Phase 4: About / FAQ / CTA / footer / contact
 
