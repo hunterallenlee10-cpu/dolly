@@ -33,10 +33,10 @@ export default function ConceptMark({ variant = "full", tone = "ink", className 
   if (variant === "monogram") return <Monogram tone={tone} className={className} />;
   const text = tone === "ink" ? "text-ink" : "text-ivory";
   return (
-    <span className={`inline-flex items-center gap-3 ${className}`}>
-      <Monogram tone={tone} className="h-11 w-auto shrink-0" />
+    <span className={`inline-flex items-center gap-2.5 sm:gap-3 ${className}`}>
+      <Monogram tone={tone} className="h-10 w-auto shrink-0 sm:h-11" />
       <span className={`flex flex-col leading-none ${text}`}>
-        <span className="display text-[1.15rem] tracking-[-0.01em] whitespace-nowrap md:text-[1.25rem]">Dolly&rsquo;s Tax &amp; Advisory</span>
+        <span className="display text-[1.02rem] tracking-[-0.01em] whitespace-nowrap min-[360px]:text-[1.15rem] md:text-[1.25rem]">Dolly&rsquo;s Tax &amp; Advisory</span>
         <span className={`mt-1.5 text-[0.62rem] font-semibold tracking-[0.32em] uppercase ${tone === "ink" ? "text-brass-deep" : "text-brass-light"}`}>
           CPA, LLC
         </span>

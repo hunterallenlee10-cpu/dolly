@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, m as motion, useReducedMotion } from "motion/react";
 import { RotateCcw } from "lucide-react";
 import BookCallButton from "@/components/booking/BookCallButton";
 import type { AudienceOption, ServiceOption } from "@/lib/site";

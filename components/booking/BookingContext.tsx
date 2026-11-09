@@ -2,7 +2,9 @@
 
 import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from "react";
 import type { AudienceOption, ServiceOption } from "@/lib/site";
-import BookingModal from "./BookingModal";
+import dynamic from "next/dynamic";
+
+const BookingModal = dynamic(() => import("./BookingModal"), { ssr: false });
 
 export type BookingPreset = {
   service?: ServiceOption;
@@ -34,7 +36,7 @@ export function BookingProvider({ children }: { children: ReactNode }) {
   return (
     <Ctx.Provider value={value}>
       {children}
-      <BookingModal key={session} isOpen={isOpen} onClose={close} preset={preset} />
+      {session > 0 && <BookingModal key={session} isOpen={isOpen} onClose={close} preset={preset} />}
     </Ctx.Provider>
   );
 }

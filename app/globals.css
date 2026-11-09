@@ -11,6 +11,7 @@
   --color-brass-btn: #b38e56;
   --color-brass-hover: #8f6e3b;
   --color-brass-deep: #7a5c2e;
+  --color-brass-ink: #9a7640;
   --color-brass-light: #c4a26e;
   --color-sage: #8a9a86;
   --color-sage-deep: #5f6f5b;
@@ -91,16 +92,18 @@ html.lenis body {
 @layer components {
   .display {
     font-family: var(--font-display);
-    font-variation-settings: "SOFT" 50, "WONK" 0;
+    font-variation-settings: "SOFT" 50;
     letter-spacing: -0.015em;
     line-height: 1.04;
-    font-weight: 380;
+    font-weight: 400;
   }
   .display em,
   .display .accent {
+    font-family: var(--font-fraunces-italic), var(--font-fraunces), serif;
     font-style: italic;
-    font-variation-settings: "SOFT" 100, "WONK" 1;
-    color: var(--color-brass);
+    font-variation-settings: "SOFT" 100;
+    /* A touch deeper than brass so large italic text clears 3:1 on both ivory and stone. */
+    color: var(--color-brass-ink);
   }
 
   .eyebrow {
@@ -227,13 +230,45 @@ html.lenis body {
   }
 }
 
+/* Hero entrance: CSS only, so it paints before JavaScript loads */
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes hero-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes hero-arch {
+  from { clip-path: inset(100% 0 0 0 round 999px 999px 8px 8px); }
+  to { clip-path: inset(0 0 0 0 round 999px 999px 8px 8px); }
+}
+@keyframes hero-settle {
+  from { transform: scale(1.06) translateY(16px); }
+  to { transform: none; }
+}
+.hero-rise { animation: hero-rise 0.9s var(--ease-soft) var(--d, 0s) both; }
+.hero-fade { animation: hero-fade 1.3s var(--ease-soft) var(--d, 0s) both; }
+.hero-arch { animation: hero-arch 0.9s var(--ease-soft) both; }
+.hero-settle { animation: hero-settle 1.3s var(--ease-soft) both; }
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     animation-duration: 0.001ms !important;
+    animation-delay: 0s !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
+  }
+  /* Final states, instantly */
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  [data-draw] {
+    stroke-dasharray: none !important;
+    stroke-dashoffset: 0 !important;
   }
 }

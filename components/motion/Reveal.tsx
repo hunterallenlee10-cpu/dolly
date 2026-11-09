@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
+import { m as motion } from "motion/react";
 import type { ReactNode } from "react";
 
 type Props = {
@@ -11,15 +11,12 @@ type Props = {
 };
 
 // The site's one "everything else" motion: a quiet 12px fade-up when scrolled into view.
+// Reduced motion: globals.css forces [data-reveal] to its final state, so nothing waits on JS.
 export default function Reveal({ children, delay = 0, className, as = "div" }: Props) {
-  const reduce = useReducedMotion();
   const M = motion[as];
-  if (reduce) {
-    const Tag = as;
-    return <Tag className={className}>{children}</Tag>;
-  }
   return (
     <M
+      data-reveal=""
       className={className}
       initial={{ opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}

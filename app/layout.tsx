@@ -3,15 +3,26 @@ import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { BookingProvider } from "@/components/booking/BookingContext";
 import SmoothScroll from "@/components/motion/SmoothScroll";
+import MotionProvider from "@/components/motion/MotionProvider";
 import Nav from "@/components/sections/Nav";
 import { site } from "@/lib/site";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
-  style: ["normal", "italic"],
-  axes: ["SOFT", "WONK", "opsz"],
+  style: ["normal"],
+  weight: ["400"],
   variable: "--font-fraunces",
   display: "swap",
+});
+
+// Italic is only used for one accent word per headline, so it is not preloaded.
+const frauncesItalic = Fraunces({
+  subsets: ["latin"],
+  style: ["italic"],
+  weight: ["400"],
+  variable: "--font-fraunces-italic",
+  display: "swap",
+  preload: false,
 });
 
 const inter = Inter({
@@ -48,7 +59,6 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
       { url: "/icon.svg", type: "image/svg+xml" },
     ],
     apple: "/apple-touch-icon.png",
@@ -85,14 +95,16 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
+    <html lang="en" className={`${fraunces.variable} ${frauncesItalic.variable} ${inter.variable}`}>
       <body className="grain">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-        <BookingProvider>
-          <SmoothScroll />
-          <Nav />
-          {children}
-        </BookingProvider>
+        <MotionProvider>
+          <BookingProvider>
+            <SmoothScroll />
+            <Nav />
+            {children}
+          </BookingProvider>
+        </MotionProvider>
       </body>
     </html>
   );

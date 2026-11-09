@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, m as motion, useReducedMotion } from "motion/react";
 import { Menu, Phone, X } from "lucide-react";
 import ConceptMark from "@/components/brand/ConceptMark";
 import BookCallButton from "@/components/booking/BookCallButton";
@@ -69,14 +69,18 @@ export default function Nav() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-[70] transition-[background-color,border-color,backdrop-filter] duration-500 ${
-        solid ? "border-b border-brass/25 bg-ivory/85 backdrop-blur-md" : "border-b border-transparent bg-transparent"
+        menuOpen
+          ? "border-b border-brass/25 bg-ivory"
+          : solid
+            ? "border-b border-brass/25 bg-ivory/85 backdrop-blur-md"
+            : "border-b border-transparent bg-transparent"
       }`}
     >
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[90] focus:rounded focus:bg-ink focus:px-4 focus:py-2 focus:text-ivory">
         Skip to content
       </a>
       <nav aria-label="Primary" className="container-x flex h-[var(--nav-h)] items-center justify-between gap-6">
-        <Link href="/" aria-label={`${site.shortName} home`} className="relative z-[2] -ml-1 rounded p-1">
+        <Link href="/" className="relative z-[2] -ml-1 rounded p-1">
           <ConceptMark />
         </Link>
 

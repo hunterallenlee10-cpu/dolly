@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
+import { m as motion } from "motion/react";
 
 // Hand-drawn style "Dolly" sign-off, drawn as one stroke when it scrolls into view.
 const path =
@@ -11,17 +11,17 @@ const path =
   "C 148 60, 150 66, 156 64 C 162 62, 164 54, 164 50 C 164 62, 164 76, 156 84 C 150 90, 142 86, 146 78 C 152 70, 176 62, 204 52";
 
 export default function Signature({ className = "" }: { className?: string }) {
-  const reduce = useReducedMotion();
   return (
     <svg viewBox="0 0 220 96" className={className} role="img" aria-label="Signed, Dolly">
       <motion.path
+        data-draw=""
         d={path}
         fill="none"
         stroke="#7A5C2E"
         strokeWidth="2.2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        initial={reduce ? false : { pathLength: 0 }}
+        initial={{ pathLength: 0 }}
         whileInView={{ pathLength: 1 }}
         viewport={{ once: true, margin: "0px 0px -15% 0px" }}
         transition={{ duration: 2.2, ease: [0.45, 0, 0.2, 1] }}

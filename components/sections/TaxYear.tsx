@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, useReducedMotion, useScroll, useSpring, useTransform } from "motion/react";
+import { m as motion, useReducedMotion, useScroll, useSpring, useTransform } from "motion/react";
 import { Info } from "lucide-react";
 
 type Milestone = {

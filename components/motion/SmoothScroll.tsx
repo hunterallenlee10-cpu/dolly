@@ -9,7 +9,7 @@ export default function SmoothScroll() {
     const lenis = new Lenis({
       duration: 1.1,
       easing: (t) => 1 - Math.pow(1 - t, 4),
-      anchors: { offset: -72 },
+      anchors: true,
       autoRaf: true,
     });
     (window as unknown as { __lenis?: Lenis }).__lenis = lenis;

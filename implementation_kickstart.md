@@ -35,7 +35,7 @@ Type: Fraunces (display, soft italic for one word) + Inter (body/UI), via `next/
 - [x] Background-removed headshot cutout (rembg), original kept as fallback
 - [x] Certificate: crop off Facebook UI, blur license number, cap at 360px display
 - [x] Desk cover: blurred texture crop for backgrounds, palette reference only
-- [ ] Optimized AVIF/WebP via `next/image`
+- [x] Optimized AVIF/WebP via `next/image`
 
 ## Phase 1: hero + nav
 
@@ -70,10 +70,41 @@ Type: Fraunces (display, soft italic for one word) + Inter (body/UI), via `next/
 
 ## Phase 5: polish + SEO
 
-- [ ] Metadata: title, description, canonical, OG/Twitter, noindex
-- [ ] Favicon, apple-touch icon, 1200x630 OG image
-- [ ] JSON-LD `AccountingService`
-- [ ] QA: em dash grep, CFP® grep, anchors, reduced motion, 375/768/1280/1600 widths, no horizontal scroll
-- [ ] Lighthouse mobile (target 95+ all four)
-- [ ] Screenshots at 375 and 1440
+- [x] Metadata: title, description, canonical, OG/Twitter, noindex
+- [x] Favicon, apple-touch icon, 1200x630 OG image
+- [x] JSON-LD `AccountingService`
+- [x] QA: em dash grep, CFP® grep, anchors, reduced motion, 375/768/1280/1600 widths, no horizontal scroll
+- [x] Lighthouse mobile (target 95+ all four)
+- [x] Screenshots at 375 and 1440
 - [ ] Push + deploy
+
+## QA results (local production build, Lighthouse 12 mobile)
+
+| Page | Performance | Accessibility | Best Practices | SEO |
+|---|---|---|---|---|
+| `/` | 95 | 100 | 100 | 69* |
+| `/contact` | 98 | 100 | 100 | 66* |
+
+\* SEO's only failing audit is `is-crawlable`, caused by the intentional `noindex, nofollow`. Remove the robots block in `app/layout.tsx` and `app/robots.ts` when Dolly signs off.
+
+- Zero em dashes, en dashes or "--" in rendered copy on both pages
+- Every "CFP" carries the ®; no "free"; no "Lexington Park"
+- No horizontal scroll at 320, 375, 768, 1024, 1280, 1600, 1920
+- All mobile tap targets 44px+
+- Nav anchors and footer links land below the nav; footer Contact opens `/contact` at the top
+- Booking modal: works end to end on mobile and desktop, focus trapped, Esc closes, focus returns
+- Reduced motion: hero, reveals, Venn (merged), timeline (unpinned) and signature all show final states
+- Screenshots in `docs/screenshots/`
+
+## Open items to confirm with Dolly
+
+- [ ] Exact town (site says "Southern Maryland" only)
+- [ ] Pricing (all service cards + FAQ)
+- [ ] Whether intro calls are free (site never says "free")
+- [ ] Client portal / secure document upload
+- [ ] What-to-bring checklist
+- [ ] Google Business Profile link for "Leave a Google review"
+- [ ] Real client reviews to replace the three labelled samples
+- [ ] Approve the first-person About note (marked as draft in code)
+- [ ] Approve or replace the concept logo mark
+- [ ] Form service to connect the booking form (TODO in `BookingForm.tsx`)

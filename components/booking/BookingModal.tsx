@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, m as motion, useReducedMotion } from "motion/react";
 import { X } from "lucide-react";
 import BookingForm from "./BookingForm";
 import type { BookingPreset } from "./BookingContext";

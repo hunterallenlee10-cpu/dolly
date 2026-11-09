@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
+import { m as motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import Reveal from "@/components/motion/Reveal";
 
 const steps = [
